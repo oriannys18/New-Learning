@@ -1,0 +1,18 @@
+.welcome-text {
+    font-family: 'Bangers', fantasy;  /* Fuente gruesa y llamativa */
+    font-size: 2rem;  /* Tamaño grande */
+    font-weight: bold;  /* Texto grueso */
+    background: linear-gradient(to right, red, rgb(26, 183, 2), #ff0597, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 2rem;  /* Ajusta este valor según tus necesidades */
+    margin-bottom: 1rem;  /* Ajusta este valor según tus necesidades */
+    
+}
+
+
+
+   
+  
+  
