@@ -3,6 +3,7 @@ import logo from '../img/logo.jpeg';
 import '../index.css';
 
 
+
 export const PageTwo = () => {
     return (
         <div className="container d-flex justify-content-center align-items-center min-vh-100">
