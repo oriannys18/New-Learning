@@ -1,13 +1,18 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from './context/AuthProvider';
 import { App } from './componets/App';
-import { PageTwo } from './componets/PageTwo';
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-//  <StrictMode>
-  <BrowserRouter>
-    <App/>
-  </BrowserRouter>
-//</StrictMode>
+  
+ <React.StrictMode>
+   <AuthProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AuthProvider>
+</React.StrictMode>
 );
