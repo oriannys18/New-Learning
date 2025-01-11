@@ -1,4 +1,4 @@
-import React from 'react'
+import 'react';
 import logo from '../img/logo.jpeg';
 import { useFormRegister } from './hooks/useFormRegister';
 import '../index.css';
