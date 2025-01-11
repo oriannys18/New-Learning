@@ -59,52 +59,53 @@ export const App = () => {
                                 />
                             </div>
                             <form>
-                                <div className="mb-3">
-                                    <label htmlFor="email" className="form-label">Email</label>
-                                    <input
-                                        value={email}
-                                        onChange={onChange} required 
-                                        type="email"
-                                        id="email"
-                                        placeholder="Ingresa tu email"
-                                        className={`form-control ${!formErrors.email.length > 0 ? `` : `is-invalid`}`}
-                                    />
-                                     <div id="form3Example3" className="invalid-feedback">{formErrors.email}</div>
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="password" className="form-label">Contraseña</label>
-                                    <input
-                                        value={password}
-                                        onChange={onChange} required
-                                        name="password"
-                                        autoComplete="current-password"
-                                        type="password"
-                                        id="password"
-                                        placeholder="Ingresa tu contraseña"
-                                        className={`form-control ${!formErrors.password.length > 0 ? `` : `is-invalid`}`}
-                                    />
-                                    <div id="form3Example4" className="invalid-feedback">{formErrors.password}</div>
-                                </div>
-                                <div className="form-check mb-3">
-                                    <input
-                                        type="checkbox"
-                                        id="remember"
-                                        className="form-check-input"
-                                    />
-                                    <label htmlFor="remember" className="form-check-label">
-                                        Recuérdame
-                                    </label>
-                                </div>
-                                <div className='text-center'>
-                                    <button
-                                        onClick={onLogin}
-                                        type="submit"
-                                        className="btn btn-primary w-90"
-                                    >
-                                        Iniciar Sesión
-                                    </button>
-                                </div>
-                            </form>
+                                        <div className="form-outline mb-4">
+                                            <label className="form-label" htmlFor="form3Example3">Email</label>
+                                            <input type="email" id="form3Example3" className={`form-control ${!formErrors.email.length > 0 ? `` : `is-invalid`}`}
+                                                placeholder="Ingresa tu Email" autoComplete="username" name="email" value={email} onChange={onChange} required />
+                                            <div id="form3Example3" className="invalid-feedback">{formErrors.email}</div>
+                                        </div>
+
+                                        <div className="form-outline mb-3">
+                                            <label className="form-label" htmlFor="form3Example4">Contraseña</label>
+                                            <input type="password" id="form3Example4" className={`form-control ${!formErrors.password.length > 0 ? `` : `is-invalid`}`}
+                                                placeholder="Ingresa tu contraseña" autoComplete="current-password" name="password" value={password} onChange={onChange} required />
+                                            <div id="form3Example4" className="invalid-feedback">{formErrors.password}</div>
+                                        </div>
+
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            <div className="form-check mb-0">
+                                                <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                                <label className="form-check-label" htmlFor="form2Example3">
+                                                    Recuerdame
+                                                </label>
+                                            </div>
+                                            {/* <a href="#!" className="text-body">Olvidé mi contraseña?</a> */}
+                                        </div>
+
+                                        <div className="text-center mt-3 mt-xxl-5">
+                                            <button onClick={onLogin} type="submit" className="btn btn-primary">Iniciar Sesión</button>
+                                            <div className="d-flex justify-content-between w-100">
+                                                <p className="small fw-bold mt-3 mt-xxl-5 pt-1 mb-0">
+                                                    {/* <a href="/registro" className="link-danger">Ayuda al Usuario</a> */}
+                                                    <a href="/ayuda.pdf" target="_blank" className="link-danger">Ayuda</a>
+                                                </p>
+                                                <p className="small fw-bold mt-3 mt-xxl-5 pt-1 mb-0">
+                                                    No tienes una cuenta? <a href="/registro" className="link-danger">Registrate</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        {/* <div className="text-center mt-3 mt-xxl-5">
+                                            <button onClick={onLogin} type="submit" className="btn btn-primary">Iniciar Sesión</button>
+                                            <p className="small fw-bold mt-3 mt-xxl-5 pt-1 mb-0">
+                                                <a href="/registro" className="link-danger">Ayuda</a>
+                                            </p>
+                                            <p className="small fw-bold mt-3 mt-xxl-5 pt-1 mb-0">No tienes una cuenta? <a href="/registro"
+                                                className="link-danger">Registrate</a></p>
+                                        </div> */}
+
+                                    </form>
                             <div className="text-center mt-3">
                                 <a href="#" className="text-danger text-decoration-none">Ayuda</a>
                                 <p className="mt-2">
