@@ -7,7 +7,8 @@ import axios from 'axios';
 
 
 
-export const PageTwo = () => {
+export const PageTwo = () => { 
+    
 
     const initialForm = { name: '', surname: '', email: '', password: '', passwordConfirm: '', isStudent: 'true', teacherId: null };
 
