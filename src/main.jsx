@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from './context/AuthProvider';
 import { App } from './componets/App';
+import { PageTwo } from './componets/PageTwo';
 
 
 
@@ -11,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
  <React.StrictMode>
    <AuthProvider>
       <BrowserRouter>
-        <App />
+        <PageTwo />
       </BrowserRouter>
     </AuthProvider>
 </React.StrictMode>
