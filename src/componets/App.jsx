@@ -38,7 +38,12 @@ export const App = () => {
                 setIsUserInvalid(true);
             });
         };
-    }
+    };
+
+    const handleRegisterClick = (event) => {
+        event.preventDefault();
+        navigate("/PageTwo");
+    };
     return (
         <>
             <Routes>
@@ -85,15 +90,6 @@ export const App = () => {
 
                                         <div className="text-center mt-3 mt-xxl-5">
                                             <button onClick={onLogin} type="submit" className="btn btn-primary">Iniciar Sesión</button>
-                                            <div className="d-flex justify-content-between w-100">
-                                                <p className="small fw-bold mt-3 mt-xxl-5 pt-1 mb-0">
-                                                    {/* <a href="/registro" className="link-danger">Ayuda al Usuario</a> */}
-                                                    <a href="/ayuda.pdf" target="_blank" className="link-danger">Ayuda</a>
-                                                </p>
-                                                <p className="small fw-bold mt-3 mt-xxl-5 pt-1 mb-0">
-                                                    No tienes una cuenta? <a href="/registro" className="link-danger">Registrate</a>
-                                                </p>
-                                            </div>
                                         </div>
 
                                         {/* <div className="text-center mt-3 mt-xxl-5">
@@ -109,7 +105,7 @@ export const App = () => {
                             <div className="text-center mt-3">
                                 <a href="#" className="text-danger text-decoration-none">Ayuda</a>
                                 <p className="mt-2">
-                                    ¿No tienes una cuenta?   <a href="" className="text-primary text-decoration-none">Registrate</a>
+                                    ¿No tienes una cuenta?   <a href="" className="text-primary text-decoration-none" onClick={handleRegisterClick} >Registrate</a>
                                 </p>
                             </div>
                         </div>
